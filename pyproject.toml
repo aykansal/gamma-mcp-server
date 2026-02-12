@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gamma-mcp"
+version = "0.1.0"
+description = "Gamma Generate API MCP server for June connectors"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115.12",
+    "fastmcp>=2.14.2",
+    "httpx>=0.28.1",
+    "python-dotenv>=1.1.0",
+    "uvicorn>=0.40.0",
+]
+
+[project.scripts]
+gamma-mcp = "main:main"
+
+[tool.setuptools]
+py-modules = ["main", "fastmcp_server"]
